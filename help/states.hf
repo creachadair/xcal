@@ -1,0 +1,19 @@
+STATES
+
+	When you type WHO, the "state" of every user is part of the information
+you get.  These are the states and their meanings:
+
+E/N   Entering Name: the user has just JOINed and is being asked their name.
+C/N   Changing Name: they're entering a new name with the ID command.
+B-2   The user is building a message to user #2, or whichever number is shown.
+B/A   Building to All: the user is typing in a message to be sent to everyone.
+B/P   Building to Plural: sending to more than one user, but not to everyone.
+B/D   Building to Disconnected.  They've started to type a message to someone,
+      but that person left.  (Also: Black & Decker, Bondage and Discipline.)
+R/M   Reading a Message.
+COM   Executing a COMmand, such as WHO, PORT, etc.
+R/I   Reading Instructions.  This means they typed HELP.
+EXP   EXPlaining some topic (just as you're doing now).
+LIN   LINe mode: they typed LINE and can't be interrupted (type EX LINE).
+OUT   The user is OUT: they can't be reached at all right now (type EX OUT).
+---   (idle): The user is doing nothing in particular.

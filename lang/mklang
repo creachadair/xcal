@@ -1,0 +1,101 @@
+#!/usr/bin/env perl
+
+#
+# This is a script to compile language files for use by
+# Xcaliber Mark II
+#
+# A language file basically defines all the message strings that
+# Xcaliber displays -- so you can use this to make it work in another
+# language
+#
+# Reads from standard input or files named on the command line, writes
+# to standard output.  The format for the language file is:
+#
+# Off  #bytes  Description
+# ---- ------- --------------------------------
+# 0    2       Number of strings, MSB first
+# 1    1       Length of first string (n1)
+# 2    n1      String 1 data
+# 2+n1 1       Length of second string (n2)
+# ...
+#
+# k    1       Terminator (0xFF)
+#
+# Input lines should be of the form:
+#   message:string
+#
+# ...where 'message' is the name of the message you want to set, and
+# 'string' is the value you want to set it to.  If the string field
+# ends in a back-slash, the next line is interpreted as a continuation
+# and folded in.  The carriage return and any leading whitespace are
+# deleted.
+#
+# The string "<CR>" is interpreted to mean "whatever you are using for
+# an end-of-line marker, and is translated accordingly.  The string
+# "<SP>" is taken to mean a space character, and the "<TAB>" string is
+# taken to mean a tab character.
+#
+# End-of-line comments are not supported, but comment lines are
+# denoted by a leading hash-mark (#).  Blank lines are ignored.
+#
+
+chomp($prog = `basename $0`);
+
+# These are the message names in their proper order -- don't change
+# these without having a damned good idea what you are doing!
+@MSG = (
+	"confull", "conterm", "welcome", "entname", "mwelc", "intro", 
+	"tlkwith", "newuser", "donemsg", "msgfrom", "allfrom", "namenot",
+	"exnot", "killnot", "speak", "outmsg", "youout", "igmsg", 
+	"discmsg", "norcpt", "sentmsg", "cmderr", "fmterr", "invarg", 
+	"unimp", "newwarn", "newname", "noleft", "nomsgs", "mnsmsg", 
+	"empty", "badchar", "noalls", "linmsg", "noport", "rpmsg", 
+	"bounced", "blfull", "nbport", "nowmast", "normal", "passed", 
+	"mptmmsg", "pnumsg", "timewrn", "cantexp", "fnfmsg", "leftmsg",
+	"lefthdr", "upat", "upat2", "clkmsg", "timelft", "numusrs", 
+	"infomsg", "xcalver", "antemer", "postmer", "secsing", "secplur", 
+	"minsing", "minplur", "newlang", "nolang", "curlang", "crunow",
+	"coresize", "helptop", "aytmsg", "brkmsg"
+	);
+
+for($ix = 0; $ix <= $#MSG; $ix++) {
+    $MSG{$MSG[$ix]} = $ix;
+}
+
+while($line = <>) {
+    chomp($line);
+    
+    next if($line =~ /^\s*$/ || $line =~ /^\s*\#/);
+
+    ($msg, $str) = split(/=/, $line);
+    if(!defined($MSG{$msg})) {
+	warn "$prog: message type '$msg' not defined\n";
+    } else {
+	while($str =~ /\\$/) {
+	    $str =~ s/\\+$//;   # clip the trailing backslash
+	    chomp($line = <>);  # read the next line
+	    $line =~ s/^\s+//;  # clobber leading whitespace
+	    $str .= $line;      # append to previous
+	}
+	$str =~ s/<CR>/\r\n/mg;
+	$str =~ s/<SP>/ /mg;
+	$str =~ s/<TAB>/\t/mg;
+	$str =~ s/<BEL>/\a/g;
+	$SRC{$msg} = $str;
+    }
+}
+
+$num = keys(%SRC);  # number of messages
+syswrite(STDOUT, pack("n", $num), 2);
+
+for($ix = 0; $ix <= $#MSG; $ix++) {
+    if($SRC{$MSG[$ix]}) {
+	$data = pack("Ca*", length($SRC{$MSG[$ix]}), $SRC{$MSG[$ix]});
+	syswrite(STDOUT, $data, length($data));
+    } else {
+	syswrite(STDOUT, pack("C", 0), 1);
+    }
+}
+syswrite(STDOUT, pack("C", 0xFF), 1);
+
+exit(0);

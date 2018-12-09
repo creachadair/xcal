@@ -1,0 +1,422 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN">
+<htmL>
+<head>
+  <title>A Brief History of XCaliber</title>
+  <link rel="stylesheet" type="text/css" href="../styles/new.css">
+</head>
+<body>
+
+<h1 class="special">
+A Brief History of XCaliber</h1>
+
+<h3>by <a href="/~sting/">Michael J. Fromberger</a></h3>
+
+<p>What follows is my best attempt at an informal, unofficial
+"history" of Xcaliber.  Most of this is drawn from apocryphal stories
+and personal experience, so you should not take this to be a
+definitive document with regard to historical accuracy.  My sources,
+such as they are, are cited in the <a href="#notes">Footnotes</a>
+section.</p>
+
+<dl class="note">
+<dt>Nota Bene</dt>
+<dd>
+The particular spelling "Xcaliber" is intentional, following the
+spelling used by the original authors.  The connexion to the mythical
+"Excalibur" is clear, but they are most surely spelled differently.
+</dl>
+
+<p>Between about 1977 and 1982, David D. Wright (Dartmouth '78) and
+Michael S. Morton (Dartmouth '80) wrote a multi-terminal conference
+program called Xcaliber.<sup><a href="#fn1">[1]</a></sup> Xcaliber ran
+under Dartmouth College Time Sharing (DCTS), one of the first (if not
+<em>the</em> first) time-sharing operating systems in the world.</p>
+
+<p>At that time, the general mode of thought was this: Powerful
+computers are big and expensive, and it doesn't make sense for people
+to build or buy their own.  Instead, a few of the larger academic and
+scientific institutions would pool their resources to build a single
+large workhorse "mainframe" computer, and individual users would
+connect to it via terminals, which -- since they had only enough logic
+in them to handle input and output -- were much less expensive.  By
+selling time on the big machine, the original investors would recoup
+some of their setup and maintenance costs, and the machine would be
+kept busy.</p>
+
+<p>DCTS was a fairly remarkable system.  Developed as much by the
+student system programmers ("sysprogs") as by its designers, at its
+height it might handle as many as two to three hundred independent
+interactive user terminals, a feat it accomplished with reasonable
+grace, according to the Dartmouth graduates of that era I've chatted
+with about the matter.  Even a modern Unix server would have great
+difficulty handling this many interactive connexions at a time<sup><a
+href="#fn2">[2]</a></sup>, and when you consider the '70's-vintage GE
+and Honeywell mainframes they were using, it's even more remarkable.
+Suffice it to say, in any case, that this central computer system
+quickly became popular both on and off the Dartmouth campus, and
+several banks of terminals were wired in to the DCTS system both from
+around campus and from remote sites (relative to Hanover, NH) such as
+the Merchant Marine academy in Connecticut, and Ursinus College in
+Pennsylvania.</p>
+
+<p>As networks of this type burgeoned, so too did people who wrote
+software permitting the users at the various terminals to send
+messages to each other.  Xcaliber was certainly not the first of its
+kind, in this regard<sup><a href="#fn3">[3]</a></sup>, but it quickly
+achieved a staggering popularity among all the users of DCTS, and
+during the remainder of the lifetime of the DCTS system, this
+popularity never waned, despite the best efforts of the administration
+at Dartmouth's Kiewit Computation Center to suppress it.</p>
+
+<p>With Xcaliber, you would create a new conference by "linking" the
+conference with a particular name, and then other DCTS users could
+"join" that conference and converse.  There are certainly uses for
+such a system other than socializing, and, indeed, there was a time
+when the student assistants (or PTR assistants, as they were called at
+that time) had a conference of this type for people who needed to ask
+computer-related questions<sup><a href="#fn4">[4]</a></sup>.  For
+social things, however, which clearly dominated Xcaliber usage, the
+conventional name was 'XYZ', and the two names -- Xcaliber and XYZ --
+soon became synonymous in people's minds.  Whole social groups sprang
+up around "the con", and at its height, XYZ was linked and active from
+07.00 when D1 came up 'til 03.00 when it went down for backups.</p>
+
+<p>Each user of the conference could be identified by a "status line"
+consisting of their "id" -- the nickname they had chosen -- some
+information about their status and what they were doing, and the "port
+number" they were connected through.  This last, perhaps, may require
+explanation: Terminals were wired to DCTS directly, and were not
+"independent" network entities in the same way that desktop computers
+-- even those using "terminal emulation" software -- are today.  So,
+the "port number" for a given terminal corresponded to which of the
+various physical wall-jacks (and thereby, ports on the mainframe) the
+terminal was connected to.</p>
+
+<p>Because of this one-to-one correspondence between port numbers and
+physical locations, you could use the port information to locate which
+terminal someone was connected from.  Since you were otherwise
+entirely anonymous, however, Xcaliber also permitted you to "reject
+ports".  This meant that other people couldn't see which port you were
+connected from -- but in exchange, you couldn't see which ports they
+were connected from either, even if they were not rejecting ports
+themselves.</p>
+
+<p>To add to this, Xcaliber also could assign names to ports, or to
+ranges of ports.  This name was also given on the status line.  While
+it was originally intended that this feature be used to give all the
+ports in, say, the library, a common name (like "Library"), in
+practise, the ports were given names like "Istanbul", "Fantasia",
+"Madwand", "Asylum", and "St Croix"<sup><a href="#fn5">[5]</a></sup>.
+Part of the fun was to figure out the correspondence between the name
+and the location of the terminal cluster.</p>
+
+<p>Here are some examples of status lines from an Xcaliber conference,
+with some annotations for the uninitiated<sup><a
+href="#fn6">[6]</a></sup>:</p>
+
+<pre><code>
+         +++-------------------------------------------what user is doing
+         ||| +++++-------------------------------------status indicators       
+         vvv |||||                  vvvvvvvvvvvvvvvv---"con name"
+=&gt;[#0] M COM    CN  Asylum   0/6533 Sting, masterful
+  [#2]   B/A R  CN  Moscow   1/2013 Gwenhwyvar
+  [#3]   ---   PCN  Rejecting ports 
+  [#4]   ---    CN  St Croix 0/3133 echo
+  [#7]   B-3 R  CN  Reality  0/2130 Heps, l/t Mingus
+  ||||              ^^^^^^^^ | ^^^^------port number
+  ++++-user number  |||||||| +-----------which connexion from this port
+                    ++++++++-------------port name
+</code></pre>
+
+<p>Users would often use the same name from conference to conference,
+and there were whole groups of people who knew each other by no other
+names.  Indeed, it was considered gauche to introduce on XYZ'er to
+another by anthing BUT his or her "con name"; if the user wished to
+divulge his or her own name, that was their affair -- but as often as
+not, even when they did know each others' real names, it was a sign of
+"in group" to use the con-name.<sup><a href="#fn7">[7]</a></sup></p>
+
+<hr>
+<h2>About Xcaliber Mark II</h2>
+
+<blockquote><p>
+ "...AS THEY RODE, ARTHUR SAID, I HAVE NO SWORD.  NO FORCE, SAID MERLIN,
+ HEREBY IS A SWORD THAT SHALL BE YOURS, AN I MAY.  SO THEY RODE TILL
+ THEY CAME TO A LAKE, THE WHICH WAS A FAIR WATER AND BROAD, AND IN THE
+ MIDST OF THE LAKE ARTHUR WAS WARE OF AN ARM CLOTHED IN WHITE SAMITE,
+ THAT HELD A FAIR SWORD IN THAT HAND.  LO, SAID MERLIN, YONDER IS THAT
+ SWORD THAT I SPAKE OF.  WITH THAT THEY SAW A DAMOSEL GOING UPON THE
+ LAKE.  WHAT DAMOSEL IS THAT?  SAID ARTHUR.  THAT IS THE LADY OF THE
+ LAKE, SAID MERLIN; AND WITHIN THAT LAKE IS A ROCK, AND THEREIN IS AS
+ FAIR A PLACE AS ANY ON EARTH, AND RICHLY BESEEN; AND THIS DAMOSEL WILL
+ COME TO YOU ANON, AND THEN SPEAK YE FAIR TO HER THAT SHE WILL GIVE YOU
+ THAT SWORD.  ANON WITHAL CAME THE DAMOSEL UNTO ARTHUR, AND SALUTED HIM,
+ AND HE HER AGAIN.  DAMOSEL, SAID ARTHUR, WHAT SWORD IS THAT, THAT YONDER
+ THE ARM HOLDETH ABOVE THE WATER?  I WOULD IT WERE MINE, FOR I HAVE NO
+ SWORD.  SIR ARTHUR, KING, SAID THE DAMOSEL, THAT SWORD IS MINE, AND IF
+ YE WILL GIVE ME A GIFT WHEN I ASK IT YOU, YE SHALL HAVE IT.  BY MY FAITH,
+ SAID ARTHUR, I WILL GIVE YOU WHAT GIFT YE WILL ASK.  WELL, SAID THE DAM-
+ OSEL, GO YE INTO YONDER BARGE, AND ROW YOURSELF TO THE SWORD, AND TAKE IT
+ AND THE SCABBARD WITH YOU, AND I WILL ASK MY GIFT WHEN I SEE MY TIME."
+
+                                THE ROMANCE OF KING ARTHUR<sup><a href="#fn8">[8]</a></sup>
+</p></blockquote>
+
+<p>Xcaliber Mark II came to be at Christmas-time, 1997.  By that time,
+DCTS was all but dead...indeed, it had been scheduled for final
+decommissioning in 1994, but its existence had been laboriously
+prolonged by the eternal slowness of the administrative MIS
+department, which still keeps records there.  However, it is certainly
+no longer used as the primary computing system, and indeed, only a few
+people had accounts on it anymore.</p>
+
+<p>When I first arrived at Dartmouth in 1989, however, it was still
+quite active.  Personal computers had only become a reality a few
+years earlier, in 1986 -- and terminals were still widespread around
+campus. Even a few of the remote terminal clusters were still there,
+hanging on by their fingernails, so to speak, and so XYZ was still a
+popular form of entertainment.  By all accounts, its glory days were
+well and truly over by that point, but there were still a few people
+in my class and the ones immediately surrounding it, who managed to
+fail out because of it.</p>
+
+<p>The most commonly accepted explanation for its decline was the
+advent of the BlitzMail e-mail system at Dartmouth.  Prior to Winter
+Term 1989, when BlitzMail 1.0 was released to the freshman Class of
+'92, Dartmouth students had used DCTS for e-mail almost
+exclusively<sup><a href="#fn8">[8]</a></sup>.  The burgeoning
+campus-wide AppleTalk network had not entirely destroyed it, because
+students still had to connect to D1 for their mail and classwork.
+Now, however, there was a friendly Macintosh alternative, and within
+three years, incoming students were no longer automatically given
+accounts on DCTS<sup><a href="#fn10">[10]</a></sup>.</p>
+
+<p>Belying its age and simple line-oriented interface, the original
+Xcaliber is a very effective conferencing program.  Unlike Unix
+'talk', it is message-oriented, so you can compose your thoughts in
+peace, and fix your typos.  Unlike IRC, you can compose messages
+without being interrupted by other messages.  And unlike almost any
+other form of chat program currently extant<sup><a
+href="#fn11">[11]</a></sup>, it works very nicely with nothing but a
+dumb terminal.</p>
+
+<p>And so it came to be that on the afternoon of the 23rd, my friend
+Sparrowhawk and I were chatting via Unix 'talk', and came to be
+reminiscing about the "good old days" when we used to talk on the con.
+As a result of having worked for many years at the College's computer
+center, my account on DCTS was still active, even though the machine
+is "officially" inaccessible to the general population.  And so, we
+logged in under my user ID and fired up old reliable Xcaliber
+again.</p>
+
+<p>It wasn't long before the old muscle memory returned, and we were
+cheerfully chatting back and forth.  Having a scrollback record of the
+conversation was very pleasant<sup><a href="#fn12">[12]</a></sup>, and
+in fact the only thing I found I "missed" about other chat systems was
+the ability to "emote" as is common in programs of the MUD family.
+Sparrowhawk agreed, and we lamented the passing of the old-but-good
+Xcaliber.</p>
+
+<p>And then, as he is often wont to do, he asked me:</p>
+
+<blockquote><p>
+"How much work do you figure it would be to re-write this for some
+other system?"</p></blockquote>
+
+<p>I thought about it for a minute.  There was no hope of
+<em>porting</em> such a beastly program, written as it was for the old
+G.E. Macro Assembly Package, or GMAP -- a beastly contrivance from out
+of the dark age of Hollerith cards and paper tape drives, when even a
+drum memory was considered pretty hot stuff<sup><a
+href="#fn13">[13]</a></sup>.  But now, under a nice, modern Unix, with
+an ANSI C compiler and a decent POSIX library -- how hard could it be
+to do some of these things?</p>
+
+<p>And thus was Xcaliber Mark II born.  Over the next 56 hours, from
+sometime late-late in the evening on the 23rd until roughly 5am on the
+morning of the 26th, I hammered together a reasonable working draught
+of an Xcaliber-look-alike, on my SGI at work.  In the end, what I
+had was a program of roughly 3K lines of ANSI C code that compiled to
+an executable occupying approximately 60KB of disk space, and
+implemented the essential features of the old Xcaliber.  Compare this
+to the perhaps 7K source lines of the original Xcaliber in GMAP --
+especially taking into consideration the relative code densities of
+the two langages<sup><a href="#fn14">[14]</a></sup>, and you can see
+that the C version is much smaller.  Now, to be <em>completely</em>
+fair, I did not initially implement some of the harder features of the
+original Xcaliber, such as complex terminal parity handling,
+subconferences (although this feature was added later on), and the
+help system was absent.  Still, for two days' work, I think it's a
+very reasonable compromise.<sup><a href="#fn15">[15]</a></sup>.  A few
+more hours' work restored the help system (with the original help text
+intact) to Xcaliber Mark II.  Several additional hours were put into
+making "sub-conferences" work.  The remaining features that are not
+implemented are some of the terminal-handling switches (parity, screen
+output, etc.), the ability to "bounce" users<sup><a
+href="#fn15">[15]</a></sup>, the "find ports" commands, and the "info"
+command.  Also, the "left" command doesn't currently permit a number
+argument (or rather, it ignores it if it's there).</p>
+
+<p>Xcaliber Mark II was written as a present to Sparrowhawk, but I
+would be remiss if I said I did it for only altruistic reasons; the
+effort was also a great deal of fun, and brought back a lot of good
+(and bad) memories of people I knew because of the old XYZ.  And
+although I know it will never happen, half my heart secretly wishes to
+see it rise again.</p>
+
+<hr>
+
+<p><small>
+This history was written by 
+ <a href="/~sting/">Michael J. Fromberger</a> on
+ December 26, 1997 in Wilder, Vermont.
+It was edited on February 23, 1999.
+It was converted to HTML on November 22, 2003.</small></p>
+
+<hr>
+<h2><a name="notes"></a>Footnotes</h2>
+
+<p><a name="fn1">[1]</a> From the Xcaliber source (used without
+permission):</p>
+
+<pre><code>
+Xcaliber -- MULTI-TERMINAL CONFERENCE PROGRAM
+BY DAVID D. WRIGHT '78, DARTMOUTH COLLEGE
+AND MICHAEL S. MORTON '80, DARTMOUTH COLLEGE
+ COPYRIGHT (C) 1977 DAVID D. WRIGHT
+ COPYRIGHT (C) 1978 DAVID D. WRIGHT
+ COPYRIGHT (C) 1979,1980,1981,1982 DAVID D. WRIGHT AND MICHAEL S. MORTON
+
+ ALL RIGHTS RESERVED.  NO PORTION OF THIS PROGRAM MAY BE USED
+ WITHOUT EXPRESS WRITTEN CONSENT OF THE AUTHORS.
+</code></pre>
+
+<p><a name="fn2">[2]</a> Although it is worth noting that DCTS
+employed a principally line-oriented interface, which greatly reduced
+the overhead per connection for the operating system, in comparison to
+the byte by byte connections typical of the modern Unix interface.</p>
+
+<p><a name="fn3">[3]</a> From the Xcaliber source, again (used without
+permission):</p>
+
+<pre><code>
+THANKS ARE SURELY IN ORDER TO DICK GREEN '75, WHO MUST BE CONSIDERED
+THE FOUNDER OF THE CON PROGRAM AS AN INSTITUTION (AS AUTHOR OF XTALK
+ALONG WITH HAL FRANKLIN '76) AND TO PAUL HEISING '78, AUTHOR OF XSQUAWK
+AND ALL-ROUND NICE GUY.
+</code></pre>
+
+<p><a name="fn4">[4]</a> Kiewit Computation Center, inarguably the hub
+of campus computing activity, even in this day of personal computers
+and desktop workstations, staffs a variety of student consulting
+assistants.  When terminals were in vogue, these students staffed the
+Public Terminal Room, or PTR.  This terminology finally died out in
+the early `90's and was replaced with "student assistants" and "public
+clusters".</p>
+
+<p><a name="fn5">[5]</a> To quote the help for the original Xcaliber:
+"The Port command allows you to figure out where other users are.  The
+names are fairly arbitrary so good luck figuring out where people
+are." (used without permission)</p>
+
+<p><a name="fn6">[6]</a> This is from the original Xcaliber running on
+DCTS.</p>
+
+<p><a name="fn7">[7]</a> Shadowjack, a Dartmouth '88, told me the
+story once of how he went to lunch with a group of people from the
+con.  When they arrived, one friend introduced him to everyone by his
+real name, leaving him at quite an uncomfortable disadvantage!</p>
+
+<p><a name="fn8">[8]</a> The original Xcaliber source code is
+sprinkled liberally with various song lyrics and quotations.  I assume
+this particular one to be the inspiration for the name of Xcaliber
+itself.</p>
+
+<p><a name="fn9">[9]</a> There were other systems around, including
+Unix systems for the Dante project; however, the bulk of e-mail
+traffic went through DCTS, since that's where all the students had
+their accounts, did their printing, and, of course, talked on XYZ.</p>
+
+<p><a name="fn10">[10]</a> I worked as a consultant at Kiewit from
+Winter '92 until the end of Fall '94, and it is my recollection that
+we stopped automatically giving the freshmen new accounts the Fall of
+'92, as the Class of '96 was arriving.</p>
+
+<p>Accounts were still given out freely to anyone who wanted them, of
+course -- and many classes, notably in the Physics and Math dept's.,
+still used software that had been developed there.  Sometime in the
+summer or fall of '94, they announced that DCTS would be going offline
+permanently on July 1, 1995.  I believe there had been an abortive
+attempt to do this earlier, too, but the chronology is fuzzy in my
+head.  When July 1, 1995 rolled around, however, there was still too
+much legacy data on the system, and so while most accounts were
+disabled, the machine itself was left running.</p>
+
+<p>As of this writing, it is still running.  And Xcaliber is still
+there, although nobody can use it anymore.</p>
+
+
+<p><a name="fn11">[11]</a> With the exception, perhaps, of the MUD
+family of programs, which have been, since their inception in the late
+'80's, strongly tied to the "terminal interface culture".  Still, they
+suffer from the "interrupted message" syndrome that Xcaliber
+lacks.</p>
+
+<p><a name="fn12">[12]</a> Dartmouth '92s James Osborne, Rick Crabbe,
+Nick Brosnahan, and Michael D. McDaniel wrote a Macintosh 'talk'
+client, DoubleSpeak, that supported a scrolling record of the
+conversation; however, this is not the customary behaviour of 'talk'
+implementations.</p>
+
+<p><a name="fn13">[13]</a> Okay, so I'm perhaps exaggerating a bit,
+but here is a sample of what GMAP looks like, see if you don't agree
+with me?</p>
+
+<pre><code>
+	QTUMSG:NULL
+	LDA NEGBIT,DU SEND TO #0
+	MSETM YTUDSC,(0,DU),LDX0
+	INHIB ON
+	LDAQ LAST2P"LOAD THE NEW "EXECUTE FAULT" WORD
+	STAQ XCF"AND PUT IT IN THE FAULT VECTOR
+	LDA TIMLEF"GET THE LAST TWO MINUTES
+	EMM M$CLOK"AND ISSUE THE TIMER
+	INHIB OFF
+	TRA EMPTY THAT'S ALL ON THIS TASK
+</code></pre>
+
+<p>Like FORTRAN, it's somewhat position-sensitive, and to be fair, a
+lot of what you see here are comments -- but without those comments,
+even the authors could never guess what the heck this does.  It's
+probably a beautiful language compared to hand-coding in hex, but to
+someone accustomed to polite, block-structured languages in the
+tradition of Algol and Modula, the only word that springs immediately
+to mind is "yuck."</p>
+
+
+<p><a name="fn14">[14]</a> I do not have actual statistics on code
+density freshly in my head as I write this; however, it's reasonable
+to assume that the number of lines which actually generate executable
+code in a GMAP program is much higher than the number in a C program.</p>
+
+<p>On the other hand, you might argue that each line of a C program
+generates much MORE code than any single line of GMAP.  But that code
+is written by the compiler, not by me, so if you view code- density as
+the ratio of source lines to target instructions, it is pretty clear
+that C has a much lower density than GMAP.</p>
+
+<p><a name="fn15">[15]</a> This code would also not win any software
+engineering awards; the three-way compromise between efficiency,
+development time, and well- documented code, when it came to conflict,
+was always resolved in favour of development time.  It's not always
+pretty.</p>
+
+<p><a name="fn16">[16]</a> It's not entirely clear how this would be
+done; bouncing by TCP port is not very useful at all.  On the other
+hand, bouncing by IP address is probably too powerful, and in any case
+breaks the syntax of the original Xcaliber.  I may implement it purely
+for the sake of completeness, although I suspect it would be useless
+in practise.</p>
+
+</body>
+</html>

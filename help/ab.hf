@@ -1,0 +1,5 @@
+AB (Accept Break)
+
+	The AB command has the opposite effect of the RB (Reject Break) command.
+If you type AB, pressing 'break' later will disconnect you from the conference.
+For more information, type E RB.

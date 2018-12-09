@@ -1,0 +1,13 @@
+NEWS
+
+	Despite all appearances, this is NOT, in fact, the Xcaliber you
+know and love, but instead a new version!  But then, if you are reading
+this, you probably already knew that.
+	There are some features missing from this version that were
+present in the original Xcaliber.  Some of these will be implemented
+as I have time; others are either not relevant to the system outside
+of D1 or aren't interesting enough for me to implement them.  But
+feature requests are welcome.
+	With version 1.28p3, the bug with 'a ' and 't ' has been fixed.
+Please report any other bugs you encounter via e-mail to: 
+	<sting@linguist.dartmouth.edu>

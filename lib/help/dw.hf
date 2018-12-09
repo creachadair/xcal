@@ -1,0 +1,8 @@
+DW (Display Warning)
+
+	The DW command tells you the current warning which the main master has
+put on.  This warning was either on when you joined the conference or was
+sent to you since then.  If there is no current warning, you will receive a
+response of <cr><lf><lf><bel>, which can never be the actual warning (since
+real warnings cannot contain "control" characters.)  For more information,
+type E WARNING.

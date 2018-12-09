@@ -1,0 +1,5 @@
+LINE
+
+x	Typing Line (or just L) will make Xcaliber stop sending you messages and
+type "Command line--" .  It will then wait for a command.  This is useful
+when one is getting swamped with messages (especially on a screen.)

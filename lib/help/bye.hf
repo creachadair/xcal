@@ -1,0 +1,6 @@
+BYE
+
+	Typing  BY disconnects you from the conference.  The BYE command is
+the same as STOP.  You can also leave the conference by just pressing the
+'break' key once, unless you're building a message or have Rejected Breaks
+(type EX RB).

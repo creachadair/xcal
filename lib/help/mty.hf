@@ -1,0 +1,10 @@
+MTY
+
+	The MTY command allows the main master to create "master" terminals.  A
+Master can have a subconference of his or her own if the main master (#0)
+chooses to pass users to the "submaster."  To make someone a master, just
+type
+        MT <user#>,<user#>,...
+giving the <user#>s of all the users you want to become masters.  To remove
+someone's master permissions, the main master can use the NORmalize command
+(type EXPLAIN NOR).

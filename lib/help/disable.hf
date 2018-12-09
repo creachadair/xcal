@@ -1,0 +1,9 @@
+DISABLE
+
+	The DIsable command may be used by any master to prevent tell-alls
+within his or her subcon.  Anyone who tries a tell-all will get the message
+"Tell-all not enabled."
+
+	Note that this command only affects a subconference: a sub-master may
+use it.  The main master may disable tell-alls in the main conference.  To
+reallow tell-alls in one's subconference, type ENable.

@@ -1,0 +1,38 @@
+#!/usr/bin/env perl
+
+#
+# Compile an XCaliber Mark II table-of-contents file from text source
+# The source file has the format:
+#
+# filename:topic string, topic string, ...<CR>
+#
+# The format of the output is binary.  The beginning of the file is
+# the three bytes 'XM2', followed by TOC entries, followed by two
+# binary FF's marking the end of the file.
+#
+# A TOC entry is:
+# length-byte filename topic-count length-byte topic ... 0xFF
+#
+# Reads from files named on the command line, or the standard input,
+# and writes results to standard output
+#
+syswrite(STDOUT, "XM2", 3);
+while($line = <>) {
+    chomp($line);
+
+    $line =~ s/\#.*$//;
+    next if($line =~ /^\s*$/);
+
+    ($file, $topic) = split(/:/, $line);
+    @topic = split(/\,+/, $topic);
+    $fn = pack("Ca*C", length($file), $file, ($#topic + 1));
+    syswrite(STDOUT, $fn, length($fn));
+    foreach $top (@topic) {
+	$top =~ s/^\s+//;
+	$top =~ s/\s+$//;
+	$fn = pack("Ca*", length($top), lc($top));
+	syswrite(STDOUT, $fn, length($fn));
+    }
+    syswrite(STDOUT, pack("C", 0xFF), 1);
+}
+syswrite(STDOUT, pack("CC", 0xFF, 0xFF), 2);

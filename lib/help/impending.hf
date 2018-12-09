@@ -1,0 +1,6 @@
+IMPENDING
+
+	The IM command tells you which users are building messages to be sent
+to you.   The users are listed just as the would show up in a WHO list. 
+Note that typing an empty line (just pressing <return>) is the same as
+asking for a list of impending messages.

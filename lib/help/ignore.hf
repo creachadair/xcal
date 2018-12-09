@@ -1,0 +1,14 @@
+IGNORE
+
+	The IGnore command can prevent others on the conference from sending
+messages to you.  If you type:
+        IG 3,5,10
+for example, you won't get any more messages from users 3, 5, or 10.  If
+you type IG, without any users afterwards,  you'll be ignoring everyone,
+and won't get any messages at all.  Note that if you ignore someone even
+while they're in the middle of building a message to you, you won't get that
+message.
+	If you decide that you really did want to receive messages from someone,
+the ACcept command can undo the effects of this command.  (Type EXplain AC).
+	If you are ignoring someone, or they are ignoring you, this is shown
+in the WHO list; type  EXPLAIN WHO  for more information.

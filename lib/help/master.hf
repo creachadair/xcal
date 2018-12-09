@@ -1,0 +1,59 @@
+MASTER COMMANDS
+
+	These commands can be used only by masters (including submasters created
+by another master):
+
+KIll    disconnects the specified users.  Users accepting notification will be
+----    told "User killed at #....."
+
+MTy     creates master terminals.  Each of the users specified will become a
+---     master and may have their own subconference.
+
+NOrmalize is the opposite of MTY.  A normalized user is no longer a master and
+--------- any users in their subconference will be returned to the main subcon.
+
+GIve    The Give command allows subconferences to be created.  The syntax is:
+----            GIVE (submaster number) ; (user list)
+        so an example of how to pass people to, say, number 4 would be:
+                GIVE 4;2,5,7
+        and those users would go into the subconference of number 4.  To
+        receive users, the person receiving them must be a master.
+        
+DIsable prevents tell-alls in your subconference.
+-------
+Enable  enables tell-alls in your subconference.
+------
+
+     These commands may be used only by the main master (#0):
+
+BOunce  The BOunce command can be used to prevent users from reJOINing the con-
+------  ference after leaving it.  To use it, find the ports of the users and
+        type BO (port number),(port number)...   For instance:
+                BO 2/260, 2/261, 2/262
+        would prevent anyone on those ports from rejoining the conference.
+        Note that BOunce alone does NOT disconnect someone from the con.
+        If the user is still on the con., the BU command is easier than BO.
+        
+        This command is not currently implemented in XCaliber Mark II
+
+NBounce Opposite of BOunce; unbounces the specified ports.  NB with no ports
+------- supplied will un-bounce all bounced ports.
+
+        This command is not currently implemented in XCaliber Mark II
+
+LBounce Lists all bounced ports.  Note that ports bounced with the BU command
+------- will show up as "*hidden*" to prevent the master from finding out ports
+        with this command.
+
+        This command is not currently implemented in XCaliber Mark II
+
+BU      Bounce User.  Bounces the ports of the specified users.  This is usually
+--      easier to use than BOunce if the user is still on the conference.
+
+        This command is not currently implemented in XCaliber Mark II
+
+WArning The warning command enables you to enter a warning, which will be sent
+------- to all users and to all users who join later on.
+
+ALl     The ALL command shows you all the users on the conference, including
+---     those who are in subconferences (unlike WHO).

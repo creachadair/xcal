@@ -1,0 +1,8 @@
+RB (Reject Break)
+
+	If you don't want to be disconnected from the conference by bumping your
+'break' key, you can type RB and breaks will be completely ignored. The
+opposite is AB (Accept Break).  This is also useful if you're dialing in
+over bad phone lines which are generating breaks.
+	Of course, the RB command does nothing for the main master (#0) since a
+break on #0's terminal will always kill the conference.

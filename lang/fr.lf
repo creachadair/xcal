@@ -1,0 +1,235 @@
+#
+# Messages en Français
+#
+# Xcaliber Mark II
+#
+# Translations by Ernie Trujillo <trujillo@albsun2.alb.edu>
+#
+
+# This is sent to a newly connected user when the con is full
+confull=Xcaliber est plein--veuillez connecter plus tard<CR>
+
+# This is sent to all users when the con shuts down
+conterm=<CR>La conférence "XYZ" est terminée.<CR>
+
+# This is sent to newly connected normal users
+welcome=Hallo.  Bienvenu à Xcaliber.<CR>\
+	Comment vous appellez-vous--
+
+# This is the prompt to enter a new name after the user
+# has signed on as 'rp', and has to be reprompted for
+# a name
+entname=Comment vous appellez-vous--
+
+# This is sent to the first user who connects
+mwelc=Bienvenu(e).  Vous êtes le gérant.<CR>\
+	Comment vous appellez-vous.<SP>
+
+# This is the 'intro' message sent to all users after
+# entering their names
+intro=<CR>Tapez une commande (ou 'HELP' pour l'aide en ligne)<CR>\
+	Il y a des changements!  Tapez 'EXPLAIN NEW' pour les nouvelles!<CR>
+
+# This is sent when you enter a conference or subcon
+# %d = master number, %s = master name
+tlkwith=Vous parlez avec #%d:<SP>%s<CR>
+
+# This is sent as a notification when a new user connects
+# %d = user number, %s = user name
+newuser=<CR>Nouvelle connection à #%d: %s<CR>
+
+# This is sent to a user when (s)he completes a command
+# successfully
+donemsg=<CR>C'est fait<CR>
+
+# This is the header on a message to single or multiple
+# %d = sender number, %s = sender name
+msgfrom=<CR>Une message arrive de #%d: %s<CR>
+
+# This is the header on a message to all
+# %d = sender number, %s = sender name
+allfrom=<CR>Une message a tous de #%d: %s<CR>
+
+# This is sent as a notification when a user changes name
+# %d = user number, %s = new name
+namenot=<CR>#%d s'appelle désormais: %s<CR>
+
+# This is sent as a notification when a user disconnects
+# using 'bye' or by accident
+# %d = user number, %s = user name
+exnot=<CR>Utilisateur est disparu(e) de #%d: %s<CR>
+
+# This is sent as a notification when a user is killed by
+# the master
+# %d = user number, %s = user name
+killnot=<CR>Connection #%d terminée: %s<CR>
+
+# This is the prompt given when composing a message
+speak=<CR>Parlez!<CR>
+
+# This is sent to a user who tries to send a message to
+# someone who is "out"
+outmsg=<CR>Utilisateur(s) n'est plus au clavier<CR>
+
+# This is sent to a user when (s)he becomes "out"
+youout=<CR>Vous êtes sorti(e)...
+
+# This is sent to a user who tries to send a message to
+# someone who is ignoring him or her
+igmsg=<CR>On ne vous répond pas<CR>
+
+# This is sent to a user when they are disconnected, either
+# by the conference ending, being killed, or typing 'bye'
+discmsg=<CR>Vous n'êtes plus branché(e)<CR>
+
+# This is sent to a user who finishes composing a message, but
+# there are no more recipients (they all disconnected, went "out",
+# ignored the user, etc.)
+norcpt=<CR>La message n'a pas été envoyée--\
+	il ne reste personne pour la recevoir<CR>
+
+# This is sent to a user when his or her message is delivered
+sentmsg=Message envoyée<CR>
+
+# This is the message for an invalid command
+cmderr=<CR>Commande inexecutable<CR>
+
+# This is the message for an incorrectly formatted command
+fmterr=<CR>Erreur de syntaxe<CR>
+
+# This is the message for a command whose arguments are invalid
+invarg=<CR>Arguments incorrects<CR>
+
+# This is the message for a command which is not implemented
+unimp=<CR>Cette commande ne marche pas<CR>
+
+# This is the prompt to the master for a new warning
+newwarn=<CR>Avertissement neuf--
+
+# This is the prompt for a new id
+newname=<CR>Nouvelle appellation--
+
+# This is the response when 'left' is used but no one has gone
+noleft=<CR>Personne n'est partie<CR>
+
+# This is the response from 'im' when no messages are pending
+nomsgs=<CR>Il n'y a pas de messages<CR>
+
+# This is the response when you abort using %k
+mnsmsg=Message oubliée<CR>
+
+# This is the response when you try to send an empty message
+empty=<CR>Message vide<CR>
+
+# This is the response when your input contains illegal characters
+badchar=<CR>Charactère mauvaise<CR>
+
+# This is the response when you try to post a tell-all in a subcon
+# where tell-alls are not enabled
+noalls=<CR>Tout-Révéler n'est pas active<CR>
+
+# This is the prompt for a command line in 'line' mode
+linmsg=<CR>Tapez une commande--
+
+# This is what you get if you try to access port information while
+# you are rejecting ports
+noport=<CR>Impossible de demander ces renseignements pendant que<SP>\
+	vous cachez les votres<CR>
+
+# This is the message you get when you become RP
+rpmsg=<CR>Demandes de renseignements sont désormais rejetées<CR>
+
+# This is the message sent to a new connexion when it corresponds
+# to a bounced address
+bounced=Excuses--on ne vous admet pas<CR>
+
+# This is the message when the master tries to bounce someone and
+# the bounce list is full.
+blfull=<CR>La liste des connections a refuser est pleine<CR>
+
+# This is the message when the master lists bounced ports, and 
+# there aren't any
+nbport=<CR>Aucun<CR>
+
+# This is what a new submaster receives
+nowmast=<CR>Votre connection est desormais une gérante<CR>
+
+# This is what a submaster receives as (s)he is losing masterhood
+normal=<CR>Votre connection n'est plus gérante<CR>
+
+# This is what a (sub)master receives as (s)he is being given
+# one or more users
+passed=<CR>On vous file des connections<CR>
+
+# This is what a (sub)master receives if (s)he tries to give
+# users to a non-master terminal
+mptmmsg=<CR>Il faut les passer a un gérant<CR>
+
+# This is the "you have been passed" line for "new" users
+pnumsg=<SP><SP>Nouvelles connections<CR>
+
+# This is the warning message, when time is about to run out
+# %d = number, %s = units
+timewrn=<CR><BEL><BEL>Il vous restent %d %s<CR>
+
+secsing=second
+secplur=secondes
+minsing=minute
+minplur=minutes
+ 
+# This is what is told to a user who asks to explain something
+# for which there is no explanation
+cantexp=<CR>Inexpliquable<CR>
+
+# This is what is told to a user when they type explain and the
+# topic is found, but the file could not be opened
+fnfmsg=<CR>Fichier aide-en-ligne indisponible<CR>
+
+# This is the "left" command output.
+# %d = number of users who have left
+leftmsg=%03d connections ont terminées<CR>
+lefthdr=Parti Appellation<CR>
+
+# This is the first "uptime" message
+upat=<CR>Xcaliber a demarre à %dh%2d.%02d %s<CR>
+
+# This is the second "uptime" message
+upat2=<CR>Demarrage à %dh%02d.%02d %s en %d/%d/%02d<CR>
+
+# This is the message output by the 'clock' command
+# %d = hours, %02d = minutes, %02d = seconds, %s = am/pm
+clkmsg=L'heure actuelle: %dh%02d.%02d %s<CR>
+
+# This is the output of the 'time' command
+# %d = number of minutes
+timelft=Temps restant: %d mn<CR>
+
+# This is the output of the 'users' command
+# %d = number of users
+numusrs=<CR>%d connection(s)<CR>
+
+# This is the output of the 'info' command
+# %d = number of users now, %d = maximum number of users seen
+# so far, %s = server name, %s = server version
+infomsg=<SP><SP>Connections: %d<CR>      maximum: %d<CR>      Machine: %s\
+	<SP>version %s<CR>
+
+# This is the Xcaliber version line
+# %s = version
+xcalver=<CR>Xcaliber II v.%s écrite par Michael J. Fromberger<CR>\
+	Droits d'auteur 1997-1998 (C); tous droits réservés<CR>
+
+# Language strings
+newlang=<CR>New language--
+nolang=<CR>Language not available<CR>
+curlang=<CR>Current language: %s<CR>
+
+# This is the name of the explain topic for when you enter 'help'
+helptop=help
+
+# This is the response to a Telnet 'are you there' query
+aytmsg=[Oui, j'y suis]<CR>
+
+# This is the response to a Telnet 'BRK' message when you are
+# rejecting breaks
+brkmsg=BREAK<CR>

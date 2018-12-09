@@ -1,0 +1,19 @@
+TELL
+
+	The Tell command lets you send messages to other users on the
+conference. For example:
+        TELL 0  sends a message to user number zero
+        3,6, 7  sends a message to users 3, 6, and 7
+        TE      sends a message to all users (except those Rejecting Alls)
+	Note that you can abbreviate this command to one letter (as with other)
+commands, or to nothing (as in the middle example) if you're not sending a
+tell-all.
+
+	After you type the tell command, Xcaliber prints "Speak!".  Type in your
+message, ending it with an extra return to send it.
+
+	If you're in the middle of sending a message and decide you don't want
+to send it, just type '%k' as the LAST thing in the message.  Xcaliber will
+print "Message aborted" and the message won't be sent.  You can also hit the
+'break' key in the middle of the message to kill the message, UNLESS you're
+the master terminal.

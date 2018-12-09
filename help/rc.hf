@@ -1,0 +1,8 @@
+RC (Reject Controls)
+
+	The Reject Controls command prevents you from being sent control
+(nonprinting) characters.  When you join the conference, you're
+automatically rejecting controls, so the RC command is useful only after
+you've used OC, which lets control characters through.
+	When a user is rejecting controls, a "C" appears next to their name in
+the WHO list.

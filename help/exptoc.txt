@@ -1,0 +1,45 @@
+aa.hf:aa*ll*s,accept all*s
+ab.hf:ab*reak*s,accept break*s
+accept.hf:ac*c*ept
+an.hf:an,accept not*if*y
+asia.hf:asia
+bye.hf:by*e
+clock.hf:c*l*ock
+commands.hf:com*m*and*s
+disable.hf:di*s*able
+dw.hf:dw*arn,display warn*ing
+eambig.hf:e
+enable.hf:en*able
+everything.hf:ev*ery*thing,a
+explain.hf:ex*p*l*ain
+general.hf:he*lp,gen*eral
+give.hf:gi*ve
+hawaii.hf:hawaii
+id.hf:id*ent*ify,identity
+ignore.hf:ig*n*ore
+impending.hf:im*p*end*ing
+left.hf:l*e*ft
+life.hf:life
+line.hf:li*n*e
+mark.hf:mark* brown
+master.hf:mas*ter* com*mand*s
+mty.hf:mty
+new.hf:new*s*tuff
+normal.hf:no*r*m*al*ize
+oc.hf:oc,okay* control*s
+out.hf:out
+port.hf:p*or*t*s
+ra.hf:ra,reject all*s
+rb.hf:rb,reject break*s
+rc.hf:rc,reject control*s
+rn.hf:rn,reject not*if*y,reject notification*s
+roadrun.hf:roadrun*ner
+rp.hf:rp,reject port*s
+sight.hf:sight*ing*s
+states.hf:stat*e*s
+subcon.hf:sub*con*ference*s
+tell.hf:t*e*ll
+topics.hf:to*p*ic*s
+usnu.hf:us*er*s,nu*m*ber
+warn.hf:wa*rn*ing
+who.hf:w*ho

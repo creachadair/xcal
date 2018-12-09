@@ -1,0 +1,6 @@
+OUT
+
+	If you want to leave your terminal for a while, you can type OUt and the
+message "You are now out..." will appear.  No more messages will be sent to
+you until you press the "RETURN" key.  Anyone who tries to send a message to
+you will be told that you're "out."

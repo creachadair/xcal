@@ -1,0 +1,21 @@
+GIVE
+
+	The GIve command allows a master to create subconferences.  If you are
+a master, and make someone below you a master (using the MTy command), then
+you can pass people in your conference to them.  If you wanted, say, number
+4 to have a subconference and numbers 3, 6, and 7 to be in it, you could
+type:
+        MTY 4           (make #4 a master terminal)
+        GI 4;3,6,7      (pass users 3, 6, and 7 to 4)
+	When you type WHO, you will no longer see those three passed users in
+your conference, although #4 will still be in there.  If you type WHO4, the
+users in #4's subcon. will be listed.
+
+	If you are number 4 and type WHO, you will see both the main conference
+you are in, and the users in your subcon.  Typing BElow will show you just
+the subcon below you.
+
+	To pass the users back to the main conference, #4 could type GI 0;3,6,7
+and they would return.  Or #0 could NOrmalize #4 and the users would come
+back. If #4 leaves the conference, the members of his or her subcon.
+automatically return.

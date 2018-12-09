@@ -1,0 +1,39 @@
+#!/usr/bin/env perl
+
+#
+# Generate a privfile from a raw text file
+#
+# Copyright (C) 1997 Michael J. Fromberger, All Rights Reserved.
+#
+srand(time()|$$);
+
+while($line = <>) {
+    chomp($line);
+
+    next if($line =~ /^\s*$/);
+
+    ($name, $pw) = split(/:/, $line);
+    $s1 = int(rand(64));
+    $s2 = int(rand(64));
+    $salt = salt_char($s1) . salt_char($s2);
+
+    printf("%s:%s\n", $name, crypt($pw, $salt));
+}
+
+exit(0);
+
+sub salt_char {
+    my($val) = shift;
+
+    if($val < 26) {
+	return chr($val + ord('A'));
+    } elsif($val < 52) {
+	return chr($val - 26 + ord('a'));
+    } elsif($val < 62) {
+	return chr($val - 52 + ord('0'));
+    } elsif($val == 62) {
+	return '.';
+    } else {
+	return '/';
+    }
+}

@@ -1,0 +1,4 @@
+	The EVerything command gives you the information that a WHO and PORT
+command give you, in one listing.  If you're rejecting ports, you can't use
+EV because that would give you the port information.
+	Note that the 'A' command is the same as EV.

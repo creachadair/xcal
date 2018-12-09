@@ -1,0 +1,9 @@
+NORMALIZE
+
+	The NOrmalize command can be used by the main master (#0) to remove the
+permissions of a user he or she has already made a master with the MTY
+command (type EXP MTY).  The format is
+        NO <user#>,<user#>,...
+specifying the <user#>s of all the masters from whom you want to remove master
+permissions.  Note that any users in subconferences of those who are normalized
+will be returned to the main conference.

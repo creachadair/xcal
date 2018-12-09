@@ -1,0 +1,8 @@
+RP (Reject Ports)
+
+	The RP command prevents other users from finding your location with the
+Port command (type E PORT).  Once you have typed RP, you can't port other
+users, and you can't un-RP.
+	If you want to be rejecting ports when you sign on, you may type RP
+instead of your name; it will print "Rejecting ports" and ask for your name
+again.

@@ -1,0 +1,61 @@
+COMMANDS
+
+	Typing HELP will give you a list of beginning commands.  Other commands
+are listed below.  Most of them have a separate explanation: type EXP
+<command>.
+
+Line    Typing LINE (or L) will make Xcaliber print "Command line--" and
+----    wait for your next command.  Type E LINE for more information.
+
+IGnore  Typing IGNORE <user number> will prevent that user from sending any more
+------  messages to you.  Type EXPLAIN IGNORE.
+
+ACcept  The ACCEPT command is the opposite of IGNORE: it allows previously
+------  ignored users to once again send messages to you.
+
+AN      Accept Notification.  If you type AN, you'll be told whenever a user
+--      joins or leaves the conference, changes their name, or is killed.
+
+RN      Reject Notification.  Undoes the effect of AN.
+--
+
+RP      If you don't want other users to find your port (type EXPLAIN PORT),
+--      the RP (Reject Ports) command will prevent this.  Once you are RPed,
+        you can't use the Port command, nor can you undo the RP.
+
+AA      Accept All.  Allows you to receive messages broadcast to all.
+--
+
+RC      Reject Controls.  Prevents users from sending you messages containing
+--      "control" characters (EXP RC for more info.).
+
+OUt     If you're going to be away from your terminal, but don't want to leave
+---     the conference, typing OUT will prevent anyone from sending messages to
+        you until you type a carriage return.
+
+LEft    The LEFT command gives you a list of the most recent users to leave the
+----    conference.  Type EXPLAIN LEFT.
+
+RB      Reject Breaks.  If you type RB, Xcaliber will ignore it anytime you
+--      press the 'break' key.  The opposite is AB (Accept Break).
+
+TTy     Not unlike Simple Monitor's TTY command, typing TT will show you your
+---     own state by printing out your WHO line.
+
+INfo    The INFO command gives you a variety of information about the conference
+----
+
+RUntime Typing RU will tell you how much runtime the master is allowed and how
+------- much the conference has used up.
+
+DW      Display Warning.  Tells you the current warning, if there is one.
+--
+
+	Other, less used, commands include: HAlf (puts your terminal in half-
+duplex mode -- nothing is printed), FUll (opposite of HAlf), NParity (makes
+most terminals print slightly faster), PArity (opposite of NP), Clock (tells
+you the current time), USers (number of users on the conference -- the same
+as NUmber), OC (Okay Controls: lets you receive control characters), XC
+(XCoremap: prints a memory map).
+
+For a list of commands available to masters, type EXPLAIN MASTER.

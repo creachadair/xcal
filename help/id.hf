@@ -1,0 +1,7 @@
+ID
+
+	The ID command is used to change your name.  To use it, just type ID
+followed by the name you want.  Names may be up to 26 characters long.
+
+	Users accepting notification (those who have typed AN) will be told your
+new name.

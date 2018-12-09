@@ -1,0 +1,6 @@
+ACCEPT
+
+	The ACcept command is the opposite of IGnore; it allows users you've
+ignored to once again send messages to you.  You can type AC with no
+arguments following to accept messages from everyone you were previously
+ignoring, or AC followed by a list of users, e.g.  AC 3,4,9 .

@@ -1,0 +1,166 @@
+# INSTALLATION INSTRUCTIONS for XCaliber Mark II
+
+Quick Start
+-----------
+
+If you are impatient with instructions, here is the brief summary of what
+follows:
+
+ 1. Un-gzip and un-tar the distribution file
+ 2. Edit the `Makefile` to suit your development environment
+ 3. Edit default.h to customize settings to your liking
+ 4. Type `make xcal`
+
+The Details
+-----------
+
+1. Unpack and verify the distribution
+
+   XCaliber Mark II is distributed as a gzip-compressed Unix tape archive (tar)
+   file, and is accompanied by a detached PGP signature of the entire tape
+   archive file before compression.  To unpack the distribution, uncompress the
+   distribution file, and use 'tar' to unpack it.  You should create a
+   subdirectory for it to live in, and unpack it there, because the archive
+   does not include a top-level directory (I should probably fix this)
+
+   A typical sequence of Unix commands for doing this might be:
+
+   ```
+   % mkdir xcal-1.28p9
+   % cd xcal-1.28p9
+   % gunzip xcal-1.28p9.tar.gz
+   % tar -zxvf xcal-1.28p9.tar.gz
+   ```
+
+2. Edit the Makefile
+
+   You may need to make some changes to the Makefile to get the program to
+   build properly in your development environment. The default uses GCC and
+   should work with Clang.
+
+   One additional thing you might want to add to your CFLAGS is this argument:
+
+       -DNEED_GETDTABLEHI
+
+   My system provides a convenient function called `getdtablehi()`, which
+   returns the highest in-use file descriptor for the currently running
+   process.  Many systems don't have this, however.  Defining
+   `NEED_GETDTABLEHI` works around this problem by replacing calls to
+   `getdtablehi()` with the less efficient `getdtablesize()`.
+
+   Other than that, you shouldn't need to edit too much in the Makefile.
+
+3. Edit `default.h`
+
+   Several default settings are captured in the file 'default.h'.  These
+   include such things as where XCaliber will look for its help files, where it
+   stores its log files, where it looks for language files, and so forth.  By
+   default, most of these things are set to /usr/local/lib.  The comments in
+   this file describe what each default means.
+
+   Edit this file to suit your installation environment before you compile the
+   program.  Several of the source files rely on it, so hopefully you should
+   not have to edit them directly.
+
+4. Run `make`
+
+   To update file dependencies, run:
+
+       make depend
+
+   If your system doesn't have 'makedepend' installed (or if it's not in your
+   PATH), this might not work.  However, do not be alarmed; you can build
+   without it.  This just makes future builds easier if you have to debug
+   things.
+
+   To build the server, run:
+
+       make xcal
+
+   The output of this is an executable file called 'xcal'.  This is the main
+   server driver.  For instructions on how to use it, see the file INSTRUCT
+   which came with this distribution.
+
+5. Install the program
+
+   Installation is simple, but somewhat tedious.  The server itself can be
+   anywhere in your PATH.  However, you have to create the help and language
+   directories yourself.  Assuming you are using the default values for these,
+   you need to create the following directories:
+
+       /usr/local/lib/xcal
+       /usr/local/lib/xcal/help
+       /usr/local/lib/xcal/lang
+
+   Into the help directory, you need to copy all the help files from the `help`
+   subdirectory of the source tree:
+
+       cp help/*.hf /usr/local/lib/xcal/help
+
+   You should also generate and copy the help system's "table of contents"
+   file:
+
+       cp help/exptoc.x /usr/local/lib/xcal/help
+
+   If you do not have this file, it can be regenerated from the textfile
+   help/raw-toc.txt by the following sequence of commands:
+
+       cd help
+       mktoc raw-toc.txt > exptoc.x
+
+   This compiled table-of-contents is the only way the help system knows how to
+   map topics to help files.  If you add new help topics, you have to add them
+   to the raw-toc.txt file, and regenerate exptoc.x
+
+Language Files
+--------------
+
+"Language files" are basically files containing tables of strings, which
+XCaliber uses to determine what messages to display for a variety of
+situations.  These are set up so that the server can load them in at runtime to
+switch what language messages appear in.  The default, if no language files are
+available, is U.S. English.
+
+The raw language files (the files whose names end in '.lf' in the 'lang'
+subdirectory of the source tree) need to be compiled into a simple binary
+string table before XCaliber II can use them.  This is accomplished by the
+'mklang' script.  Here is an example of how to compile the French language file
+(fr.lf) into a string table:
+
+    mklang fr.lf > fr.lx
+
+If you wish to install alternate language files, you should use 'mklang' to
+generate a '.lx' file for each language you wish to install, and then copy
+these files to /usr/local/lib/xcal/lang (or wherever you have put the languages
+directory for your installation).  The distribution currently includes English,
+French (translated by Ernie Trujillo), Scottish Gaelic (translated by Grace
+Alden and the membership of the GAIDHLIG-B mailing list), and a crude German
+translation.
+
+Note: It is okay for both the `help` and `lang` directories not to exist; the
+help and language features will simply not work, if they cannot be found.
+
+That's all there is to it.  More than there should be, to be sure.
+
+In Case of Problems
+-------------------
+
+Well, I'll be the first to admit, I haven't made a great deal of effort to make
+this code portable.  An ANSI C compiler should be able to handle the source
+itself, but if your system puts headers in strange places (relative to the
+strange places my system puts them), you might run into some problems.  I
+apologize for this; however, it shouldn't be too much effort to tweak the
+relevant #include directives if you have problems of this sort.
+
+If you do run into problems with the code itself, however, please feel free to
+e-mail me, and I'll try to fix it or give you a workaround.  My e-mail address
+is <sting@linguist.dartmouth.edu>.  The program is provided without warranty,
+but I'm not an ogre, and I'll definitely try to help out if you have troubles.
+
+About the Author
+----------------
+
+This reimplmentation was written by and is
+Copyright (c) 1997 Michael J. Fromberger, All Rights Reserved.
+
+See the LICENSE file for more details.

@@ -1,0 +1,16 @@
+This directory contains the help files for XCaliber Mark II.  The file
+'exptoc.x' represents a compiled table-of-contents for the files here.
+Xcaliber doesn't know about it if it's not here!
+
+The script 'mktoc' will compile a text file into a binary
+table-of-contents.  See the comments at the top of 'mktoc' for how
+this works.  The uncompiled table of contents resides, for the moment,
+in raw-toc.txt
+
+The Xcaliber program looks in /usr/local/lib/xcal/help for these
+files, by default.  You can make it look elsewhere by setting the
+XCALHELPDIR environment variable before you run the program.  You know
+the drill.
+
+-MJF 27 Dec 1997
+

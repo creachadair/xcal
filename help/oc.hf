@@ -1,0 +1,6 @@
+OC (Okay Controls)
+
+	The OC command has the opposite effect of the RC command: it allows
+control characters in messages sent to you.  These characters may ring your
+terminal's bell, clear your screen, make your terminal spew out lots of
+paper, etc.

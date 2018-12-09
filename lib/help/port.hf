@@ -1,0 +1,7 @@
+PORT
+
+	The Port command allows you to find out where other users are. The names
+are fairly arbitrary so good luck figuring out where people are.
+	Like many other commands, you can specify which users you want to see.
+So P5 or P1,4,7,8 would show you the port information just for those users.
+

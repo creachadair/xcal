@@ -1,0 +1,9 @@
+AN (Accept Notification)
+
+	If you type AN, you will be told whenever someone joins or leaves the
+conference.  An 'N' will appear next to your name in the WHO list (type E WHO)
+to indicate that you're accepting notification.
+	The opposite of AN is RN (Reject Notification).  When a user joins the
+conference, they start out rejecting notification, since otherwise users on
+slow terminals could be swamped with "New user" and "Ex-user" messages
+immediately after signing on.

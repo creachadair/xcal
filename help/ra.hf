@@ -1,0 +1,8 @@
+RA (Reject Alls)
+
+	Typing RA will prevent you from receiving tell-alls.  Note that you
+won't even receive ones which are already being built when you type RA.
+	The default when you sign on is accepting messages to all, except for
+certain slow-speed ports, which are automatically RA when they join to
+prevent the user from being flooded with messages just after joining.
+	To undo an RA, type AA -- Accept Alls.

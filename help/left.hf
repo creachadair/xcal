@@ -1,0 +1,8 @@
+LEFT
+
+	The LEft command gives you a list of the most recent users to leave the
+conference, and the time they left.  If the user was KIlled, a 'K' will
+appear next to their time of departure.  If you type LE <number>, only that
+many users will be listed; so, if you type
+        LE 4
+the last four users to leave the conference will be listed.

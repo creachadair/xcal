@@ -1,0 +1,13 @@
+WARNING
+
+The WArning command allows the master to set up a warning -- a message which
+is sent to all users and also to all users who join after that time. The
+warning may be up to 80 characters long.  To prevent abuse of this feature,
+there is a limit on the total number of warnings that the master may send
+(currently 20).  Also, control characters in warnings will be masked to
+lower-case letters as they are in names.
+
+To create (or change) the warning, just type WA followed by the warning. 
+If you don't give the warning, you'll be asked for it.
+
+Any user may find out the current warning by typing DW (Display Warning).

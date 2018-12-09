@@ -1,0 +1,116 @@
+Instructions for Setting Up and Using XCaliber Mark II
+
+These instructions assume you have built and installed XCaliber Mark
+II, as described in the INSTALL file which came with this
+distribution.  Here, I describe how to start up the server, configure
+its runtime options, and use the conference.
+
+Warning:  This information may not be up to date.
+-------
+
+Starting Up the Server
+
+The most basic way to start up the server is simply to invoke it from
+the command line:
+
+	% xcal &
+
+However, there are several command-line options you may wish to take
+advantage of:
+
+-c	disable conference logging (default on)
+
+	By default, all connects, disconnects, startups, etc. are
+	logged into a textfile called 'conlog' in the XCaliber
+	directory (/usr/local/lib/xcal, by default).  If you don't
+	want this to happen, use the '-c' option when you start
+	up the server.
+
+	This says that the default is 'on', but actually, that
+	assumes you haven't tweaked it in default.h
+
+-d dur	set conference duration in minutes (default 45)
+
+	Conferences have a limited lifetime.  By default, this is
+	forty-five minutes.  You can change the length of a con
+	by specifying a different value on the command line using
+	the '-d' option.
+
+-e env	set language environment (default 'en_us')
+
+	By default, XCaliber starts up using U.S. English messages.
+	If you want it to start up with something different, specify
+	it using the '-e' option.  To specify the language encoded
+	in the file 'lang.lx', you would use 'lang' as the language
+	name, for example.
+
+-l	loop, restarting conference after it terminates
+
+	By default, the server runs one conference of the specified
+	length, and then terminates.  If the '-l' option is used,
+	the server starts up a new conference after the previous one
+	closes down, so that it's always ready to go again.  This is
+	probably what you want if you plan to run it all the time.
+
+-p port start conference at given port (default 2456)
+
+	Set the TCP port at which the server will listen for new
+	connexions to the conference.
+
+-t size	set transfer block size in bytes (default 1024)
+
+	The server queues up large writes to each connexion and does
+	them in blocks so that other users do not experience a lot of
+	lag when someone is getting a long message.  By default, this
+	block size is 1K; you can change it with this option.
+
+-w warn	warn timeout in seconds (default 120)
+
+	The server issues a warning to all connected users a little
+	while before the conference is due to terminate.  This option
+	specifies how long before termination the first warning should
+	be given (a warning is issued every 60 seconds after the first
+	warning, until the con terminates).
+
+-v	display version information and exit
+
+-h	display a summary of command-line options and exit
+
+
+Configuring Server Options
+
+The server pays attention to several environment variables when it
+starts up.  In particular, these are:
+
+XCALLANGDIR	Specifies the pathname of the directory to look for
+		language files in.  Default: /usr/local/lib/xcal/lang
+
+XCALLOGDIR	Specifies the pathname of the directory to write the
+		conlog file in.  This is the file that gets a log of
+		all connects, disconnects, etc.  By default, this
+		directory is /usr/local/lib/xcal
+
+XCALPRIVDIR	Specifies the pathname of the directory containing
+		the privilege database.  See below for an explanation
+		of privileges.  Default: /usr/local/lib/xcal
+
+XCALHELPDIR	Specifies the pathname of the directory containing
+		the help database.  Default: /usr/local/lib/xcal/help
+
+If these are not set, they default to the values that were compiled in
+from the file default.h when you built the program (see INSTALL for
+details).
+
+
+Overview of How it All Works
+
+When the server starts up, it opens up a listener socket on the given
+port, and awaits a new connexion.  The first user to connect to this
+port becomes the "master" of the conference.
+
+The conference "master" is a specially privileged user, who has the
+ability to set conference parameters, establish and regulate
+sub-conferences, and forcibly disconnect unruly users.
+
+[this needs to be finished]
+

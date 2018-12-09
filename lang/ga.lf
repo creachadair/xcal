@@ -1,0 +1,241 @@
+#
+# Brathan Gàidhlige
+# Scots Gaelic messages
+#
+# Xcaliber Mark II
+#
+# Translations made and compiled by Joshua M. Alden, Bill Innes,
+# and others from the GAIDHLIG-B mailing list
+#
+
+# This is sent to a newly connected user when the con is full
+confull=Tha Xcaliber làn--feuch a-rithist nas anmoiche.<CR>
+
+# This is sent to all users when the con shuts down
+conterm=<CR>Tha co-labhairt "XYZ" air crìochnachadh.<CR>
+
+# This is sent to newly connected normal users
+welcome=Hallo.  Fàilte do Xcaliber.<CR>\
+	Cuiribh ar n-ainm--
+
+# This is the prompt to enter a new name after the user
+# has signed on as 'rp', and has to be reprompted for
+# a name
+entname=Cuiribh ar n-ainm--
+
+# This is sent to the first user who connects
+mwelc=Hallo.  Tha sibh nar Ceann-obrach Mhaighstir.<CR>\
+	Cuiribh ar n-ainm.<SP>
+
+# This is the 'intro' message sent to all users after
+# entering their names
+intro=<CR>Cuir a-staigh òrdan (sgrìobh 'CUIDICH' airson cuideachadh)<CR>\
+	Atharrachaidhean a' dol!  Sgrìobh 'M`ANICH `UR' airson rudan ùra!<CR>
+
+# This is sent when you enter a conference or subcon
+# %d = master number, %s = master name
+tlkwith=Tha sibh a' bruidhinn ri #%d:<SP>%s<CR>
+
+# This is sent as a notification when a new user connects
+# %d = user number, %s = user name
+newuser=<CR>Neach-cleachdaidh ùr aig #%d: %s<CR>
+
+# This is sent to a user when (s)he completes a command
+# successfully
+donemsg=<CR>Deanta<CR>
+
+# This is the header on a message to single or multiple
+# %d = sender number, %s = sender name
+msgfrom=<CR>Brath bho #%d: %s<CR>
+
+# This is the header on a message to all
+# %d = sender number, %s = sender name
+allfrom=<CR>Brath dhuibh uile bho #%d: %s<CR>
+
+# This is sent as a notification when a user changes name
+# %d = user number, %s = new name
+namenot=<CR>Ainm ùr air son #%d: %s<CR>
+
+# This is sent as a notification when a user disconnects
+# using 'bye' or by accident
+# %d = user number, %s = user name
+exnot=<CR>Dh'fhalbh #%d: %s<CR>
+
+# This is sent as a notification when a user is killed by
+# the master
+# %d = user number, %s = user name
+killnot=<CR>Neach-cleachdaidh muirte aig #%d: %s<CR>
+
+# This is the prompt given when composing a message
+speak=<CR>Abair!<CR>
+
+# This is sent to a user who tries to send a message to
+# someone who is "out"
+outmsg=<CR>Luchd-cleachdaidh a-muigh<CR>
+
+# This is sent to a user when (s)he becomes "out"
+youout=<CR>Tha thu a-muigh a-nis...
+
+# This is sent to a user who tries to send a message to
+# someone who is ignoring him or her
+igmsg=<CR>Chan eil foir aig an luchd-cleachdaidh ort<CR>
+
+# This is sent to a user when they are disconnected, either
+# by the conference ending, being killed, or typing 'bye'
+discmsg=<CR>Chan eil thu a-nis ann an co-labhairt "XYZ"<CR>
+
+# This is sent to a user who finishes composing a message, but
+# there are no more recipients (they all disconnected, went "out",
+# ignored the user, etc.)
+norcpt=<CR>Cha deach am brath a-mach--cha robh luchd-esdeachd ann<CR>
+
+# This is sent to a user when his or her message is delivered
+sentmsg=Tha am brath air cuir<CR>
+
+# This is the message for an invalid command
+cmderr=<CR>Òrdugh cearr<CR>
+
+# This is the message for an incorrectly formatted command
+fmterr=<CR>Cumadh cearr<CR>
+
+# This is the message for a command whose arguments are invalid
+invarg=<CR>Iarrtas(an) mi-laghail<CR>
+
+# This is the message for a command which is not implemented
+unimp=<CR>Cha deach an t-òrdan a dheanamh fhathast<CR>
+
+# This is the prompt to the master for a new warning
+newwarn=<CR>Rabhadh ùr--
+
+# This is the prompt for a new id
+newname=<CR>Ainm ùr--
+
+# This is the response when 'left' is used but no one has gone
+noleft=<CR>Cha do dh'fhalbh duine<CR>
+
+# This is the response from 'im' when no messages are pending
+nomsgs=<CR>Chan eil brathan ann<CR>
+
+# This is the response when you abort using %k
+mnsmsg=Chan eil am brath air cuir<CR>
+
+# This is the response when you try to send an empty message
+empty=<CR>Brath falamh<CR>
+
+# This is the response when your input contains illegal characters
+badchar=<CR>Samhail cearr<CR>
+
+# This is the response when you try to post a tell-all in a subcon
+# where tell-alls are not enabled
+noalls=<CR>Sluagh-bhrath eu-comasach<CR>
+
+# This is the prompt for a command line in 'line' mode
+linmsg=<CR>Loine-òrdan--
+
+# This is what you get if you try to access port information while
+# you are rejecting ports
+noport=<CR>Le seòlaidhean dùinte cha tog thu seòlaidhean eile<CR>
+
+# This is the message you get when you become RP
+rpmsg=<CR>Seòlaidhean dùinte<CR>
+
+# This is the message sent to a new connexion when it corresponds
+# to a bounced address
+bounced=Tha mi duilich--tha sibh glaste a-muigh<CR>
+
+# This is the message when the master tries to bounce someone and
+# the bounce list is full.
+blfull=<CR>Chan fhaodar a' chorr a ghlasadh a-mach<CR>
+
+# This is the message when the master lists bounced ports, and 
+# there aren't any
+nbport=<CR>Chan eil neach glaste a-muigh<CR>
+
+# This is what a new submaster receives
+nowmast=<CR>'Se Ceann-obrach Mhaighstir a thunnaibh<CR>
+
+# This is what a submaster receives as (s)he is losing masterhood
+normal=<CR>Chan eil sibh a-nis nar Ceann-obrach Mhaighstir<CR>
+
+# This is what a (sub)master receives as (s)he is being given
+# one or more users
+passed=<CR>Tha agaibh a-nis<CR>
+
+# This is what a (sub)master receives if (s)he tries to give
+# users to a non-master terminal
+mptmmsg=<CR>Feum cuir do Ceann-obrach Mhaighstir<CR>
+
+# This is the "you have been passed" line for "new" users
+pnumsg=<SP><SP>Luchd-cleachdaidh ùr<CR>
+
+# This is the warning message, when time is about to run out
+# %d = number, %s = units
+timewrn=<CR><BEL><BEL>Tha agaibh mu %d %s fhathast<CR>
+
+# This is what is told to a user who asks to explain something
+# for which there is no explanation
+cantexp=<CR>Cha feum mi ga mìnich<CR>
+
+# This is what is told to a user when they type explain and the
+# topic is found, but the file could not be opened
+fnfmsg=<CR>Chan eil faidhle-còmhnaidh ri fhaotainn<CR>
+
+# This is the "left" command output.
+# %d = number of users who have left
+leftmsg=Tha %03d luchd-cleachdaidh Xcaliber air falbh<CR>
+lefthdr=Dh'fhalbh  Ainm<CR>
+
+# This is the first "uptime" message
+upat=<CR>Xcaliber suas aig %2d:%02d:%02d %s<CR>
+
+# This is the second "uptime" message
+upat2=<CR>Suas aig %d:%02d:%02d %s air %d/%d/%02d<CR>
+
+# This is the message output by the 'clock' command
+# %d = hours, %02d = minutes, %02d = seconds, %s = am/pm
+clkmsg=Am an-dràsda fhŽin: %d:%02d:%02d %s<CR>
+
+# This is the output of the 'time' command
+# %d = number of minutes
+timelft=Ùine maireann:  %d miona(i)d(ean)<CR>
+
+# This is the output of the 'users' command
+# %d = number of users
+numusrs=<CR>%d luchd-cleachdaidh<CR>
+
+# This is the output of the 'info' command
+# %d = number of users now, %d = maximum number of users seen
+# so far, %s = server name, %s = server version
+infomsg=<SP>Luchd-cleachdaidh: %d<CR>          os<SP>\
+	mheud: %d<CR>     Seirbheiseach: %s d.%s<CR>
+
+# This is the Xcaliber version line
+# %s = version
+xcalver=<CR>Xcaliber II v.%s le Michael J. Fromberger<CR>\
+	Dlighe-sgrìobhaidh (C) 1997-1998 Uile dlighean air an spàrr<CR>
+
+# This is how we describe the time before/after noon
+antemer='sa mhadainn
+postmer='sa feasgar
+
+# Minutes and seconds, singular and plural
+secsing=tiog
+secplur=tiogan
+minsing=mionad
+#minplur=mionaidean
+minplur=mionad
+
+# Language prompts
+newlang=<CR>Cànain ùr--
+nolang=<CR>Chan eil an cànain sin ri fhaotainn<CR>
+curlang=<CR>Cànain a-nis: %s<CR>
+
+# This is the name of the explain topic for when you enter 'help'
+helptop=cuidich
+
+# This is the response to a Telnet 'are you there' query
+aytmsg=[Tha mi seo]<CR>
+
+# This is the response to a Telnet 'BRK' message when you are
+# rejecting breaks
+brkmsg=BRISTEADH<CR>

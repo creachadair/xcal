@@ -1,0 +1,8 @@
+EXPLAIN
+
+	The Explain command can give you information on topics relating to
+Xcaliber.  You can get an explanation of almost any command, as well as
+other topics.  To get these explanations, just type
+        EXPLAIN topic
+for whatever topic.  For general information on Xcaliber, type Help.
+For a list of all the topics, type E TOPICS.
