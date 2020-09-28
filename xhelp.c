@@ -7,10 +7,10 @@
  */
 
 #include "xhelp.h"
-#include "cmd.h"
 
 #include <stdlib.h>
 
+#include "cmd.h"
 #include "default.h"
 
 #ifdef PATH_MAX

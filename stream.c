@@ -7,6 +7,7 @@
  */
 
 #include "stream.h"
+
 #include <ctype.h>
 #include <float.h>
 #include <limits.h>
@@ -15,9 +16,8 @@
 #include <stdlib.h>
 #include <string.h>
 
-#include "mem.h"
-
 #include "default.h"
+#include "mem.h"
 
 #ifndef DBL_DIG
 #define DBL_DIG DEFAULT_DBLDIG

@@ -7,18 +7,16 @@
  */
 
 #include <errno.h>
+#include <signal.h>
 #include <stdio.h>
 #include <stdlib.h>
 #include <string.h>
-
-#include <signal.h>
 #include <unistd.h>
 
 #include "con.h"
+#include "default.h"
 #include "lang.h"
 #include "net.h"
-
-#include "default.h"
 
 #define VERSION "1.32"
 #define MAXUSERS DEFAULT_MAXUSERS

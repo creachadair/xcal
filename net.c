@@ -6,11 +6,11 @@
     Network utilities
  */
 
+#include "net.h"
+
 #include <netdb.h>
 #include <string.h>
 #include <unistd.h>
-
-#include "net.h"
 
 #define BACKLOG 5
 
