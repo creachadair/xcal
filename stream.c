@@ -380,10 +380,8 @@ static void s_putlng(stream *sp, long v, int prec, char pad) {
 /*------------------------------------------------------------------------*/
 static void s_putstr(stream *sp, char *s, int prec, char pad) {
   int ix = 0;
-  int sig = 1;
 
   if (prec < 0) {
-    sig = -1;
     prec = -prec;
   }
   while (s[ix] != '\0') {
