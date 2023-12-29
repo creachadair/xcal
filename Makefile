@@ -13,7 +13,7 @@ SRCS=cmd.c con.c lang.c mem.c message.c net.c log.c port.c stream.c telnet.c\
 HDRS=$(filter-out xcal.h,$(SRCS:.c=.h)) default.h
 OBJS=$(SRCS:.c=.o)
 VERS=1.32
-EXTRAS=README INSTALL INSTRUCT LICENSE Makefile help lang lib tests \
+EXTRAS=README.md INSTALL INSTRUCT LICENSE Makefile help lang lib tests \
 	xcal-history.html
 
 TARGETS=xcal
@@ -28,7 +28,7 @@ $(TARGETS):%: $(OBJS) %.o
 all: $(TARGETS)
 
 
-TARBALL=README INSTALL INSTRUCT LICENSE Makefile ckcon $(HDRS) $(SRCS) \
+TARBALL=README.md INSTALL INSTRUCT LICENSE Makefile ckcon $(HDRS) $(SRCS) \
 	mem.h mem.c mkpriv startup xcal.c help/README help/*.hf \
 	help/exptoc.x help/mktoc lang/*.lf lang/mklang tests
 
